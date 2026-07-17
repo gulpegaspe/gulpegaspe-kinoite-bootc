@@ -3,18 +3,18 @@ name: Build -> gulpegaspe-kinoite-bootc
 on:
   #push:
   #  branches: [ "main" ]
-  workflow_dispatch:  # Permette di avviare manualmente il workflow
+  workflow_dispatch:  # It allows you to manually start the workflow
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}  # Nome immagine: ghcr.io/USER/REPO
+  IMAGE_NAME: ${{ github.repository }}  # gulpegaspe/gulpegaspe-kde-bootc
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      packages: write  # Permesso necessario per scrivere su GitHub Packages [citation:1][citation:2]
+      packages: write  # Permission required to write to GitHub Packages
 
     steps:
       - name: Checkout del repository

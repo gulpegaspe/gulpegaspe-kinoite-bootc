@@ -21,10 +21,11 @@ RUN dnf -y install plasma-workspace \
     konsole \
     plasma-print-manager \
     krfb
+# runc id needed by docker
 RUN dnf -y install brave-browser \
     distrobox \
     docker \
-    runc \ # needed by docker
+    runc \
     kde-l10n-it \
     langpacks-it \
     virt-manager

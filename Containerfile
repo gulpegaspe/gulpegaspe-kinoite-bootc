@@ -8,7 +8,8 @@ RUN dnf config-manager addrepo --from-repofile=https://brave-browser-rpm-release
 # INSTALL PACKAGES
 #RUN dnf -y install @kde-desktop-environment
 RUN dnf -y install plasma-workspace \
-    plasma-login-manager
+    plasma-login-manager \
+    plasma-nm
 RUN dnf -y install brave-browser \
     distrobox \
     docker \

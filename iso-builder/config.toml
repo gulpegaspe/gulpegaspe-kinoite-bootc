@@ -7,6 +7,7 @@ contents = """
 graphical
 
 # Tell Anaconda that this is a container-native bootc installation
-bootc
+#bootc
+#ostreecontainer--url ghcr.io/gulpegaspe/gulpegaspe-os:latest
 
 """

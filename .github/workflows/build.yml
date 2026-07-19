@@ -1,4 +1,4 @@
-name: Build -> gulpegaspe-kinoite-bootc
+name: Build -> gulpegaspe-os
 
 on:
   #push:
@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}  # gulpegaspe/gulpegaspe-kde-bootc
+  IMAGE_NAME: ${{ github.repository }}  # gulpegaspe/gulpegaspe-os
 
 jobs:
   build-and-push:

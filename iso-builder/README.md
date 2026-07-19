@@ -1,4 +1,4 @@
-podman pull ghcr.io/gulpegaspe/gulpegaspe-os:latest
+sudo podman pull ghcr.io/gulpegaspe/gulpegaspe-os:latest
 
 sudo podman run --rm -it --privileged --pull=newer \
   -v ./:/output \

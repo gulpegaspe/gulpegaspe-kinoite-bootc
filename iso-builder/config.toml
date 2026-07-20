@@ -1,13 +1,12 @@
 # config.toml
 
-[customizations]
-hostname = "gulpegaspe-os"
-
 [customizations.installer.kickstart]
 contents = """
 
 # Use the graphical installer interactive
 graphical
+
+firstboot --enable
 
 # Tell Anaconda that this is a container-native bootc installation
 #bootc

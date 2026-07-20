@@ -1,5 +1,8 @@
 # config.toml
 
+[customizations]
+hostname = "gulpegaspe-os"
+
 [customizations.installer.kickstart]
 contents = """
 

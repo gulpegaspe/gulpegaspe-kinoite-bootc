@@ -23,3 +23,8 @@ Comment out root entry in /etc/fstab because it's already set up by bootc, avoid
 ```bash
 sed -i '/ \/ /s/^/#/' /etc/fstab
 ```
+
+## Add Flathub repository
+```bash
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+```

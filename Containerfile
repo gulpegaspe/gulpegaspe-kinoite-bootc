@@ -39,6 +39,9 @@ RUN dnf -y install brave-browser \
     #spice-vdagent
     #initial-setup-gui
 
+# ADD FLATHUB REPO
+RUN flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
 # CLEAN PACKAGES
 RUN dnf -y autoremove
 RUN dnf clean all

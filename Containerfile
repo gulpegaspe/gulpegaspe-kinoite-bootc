@@ -49,7 +49,7 @@ RUN flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flath
 
 # ADD FLATHUB PACKAGES
 RUN flatpak update
-RUN flatpak install io.github.flattool.Warehouse
+RUN flatpak install -y io.github.flattool.Warehouse
 
 # CLEAN PACKAGES
 RUN dnf -y autoremove

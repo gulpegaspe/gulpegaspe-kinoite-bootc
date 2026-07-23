@@ -17,16 +17,6 @@ jobs:
       packages: write  # Permission required to write to GitHub Packages
 
     steps:
-      - name: Maximize build space
-        uses: easimon/maximize-build-space@master
-        with:
-          tool-cache: true
-          android: true
-          dotnet: true # Imposta a true solo se NON usi .NET nel tuo workflow
-          haskell: true
-          large-packages: true
-          docker-images: true
-          swap-storage: true
       - name: Checkout del repository
         uses: actions/checkout@v7
       - name: run podman build

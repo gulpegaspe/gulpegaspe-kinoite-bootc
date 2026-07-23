@@ -35,12 +35,12 @@ RUN dnf -y install brave-browser \
     flatpak-kcm \
     firefox \
     flatpak \
+    borgbackup \
     initial-setup-gui \
     initial-setup \
     initial-setup-gui-wayland-plasma
 
     #spice-vdagent
-    #initial-setup-gui
 
 # ADD FLATHUB REPO
 RUN flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo

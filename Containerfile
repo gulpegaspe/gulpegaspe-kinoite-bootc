@@ -10,7 +10,7 @@ RUN dnf -y install dnf5-plugins && \
         plasma-nm-openvpn \
         dolphin \
         kate \
-        specctacle \
+        spectacle \
         kcalc \
         krita \
         gwenview \

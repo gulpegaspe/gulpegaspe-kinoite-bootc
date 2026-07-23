@@ -17,6 +17,12 @@ jobs:
       packages: write  # Permission required to write to GitHub Packages
 
     steps:
+      - name: Maximize build space
+        uses: easimon/maximize-build-space@master
+        with:
+          root-reserve-mb: 512
+          swap-size-mb: 1024
+          remove-dotnet: 'true'
       - name: Checkout del repository
         uses: actions/checkout@v7
       - name: run podman build

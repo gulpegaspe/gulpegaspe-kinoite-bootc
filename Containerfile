@@ -32,13 +32,14 @@ RUN dnf -y install dnf5-plugins && \
         borgbackup \
         fprintd-pam \
         langpacks-it && \
+    authselect enable-feature with-fingerprint && \
     flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo && \
     dnf -y autoremove && \
     dnf clean all && \
     find /var/log -type f ! -empty -delete && \
     bootc container lint
 
-    #dnf -y install spice-vdagent
+    #dnf -y install spice-vdagent && \
     #flatpak update -y && \
     #flatpak install -y io.github.flattool.Warehouse && \
     #flatpak uninstall --unused -y && \

@@ -32,9 +32,13 @@ RUN dnf -y install dnf5-plugins && \
         borgbackup \
         langpacks-it && \
     flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo && \
-    flatpak update -y && \
-    flatpak install -y io.github.flattool.Warehouse && \
     dnf -y autoremove && \
     dnf clean all && \
     find /var/log -type f ! -empty -delete && \
     bootc container lint
+
+    #dnf -y install spice-vdagent
+    #flatpak update -y && \
+    #flatpak install -y io.github.flattool.Warehouse && \
+    #flatpak uninstall --unused -y && \
+    #rm -rf /var/cache/* /var/lib/dnf/* /var/tmp/* /tmp/* && \

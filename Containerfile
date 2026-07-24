@@ -2,7 +2,7 @@ FROM quay.io/fedora/fedora-bootc:latest
 LABEL maintainer="Ivan Gasperoni"
 
 COPY ./scripts/first-boot-setup.sh /usr/local/bin/first-boot-setup.sh
-COPY ./systemd/first-boot-setup.service /etc/systemd/system/first-boot-setup.service
+COPY ./systemd/first-boot-setup.service /usr/lib/systemd/system/first-boot-setup.service
 
 RUN dnf -y install dnf5-plugins && \
     dnf config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo && \

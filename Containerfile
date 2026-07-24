@@ -1,6 +1,9 @@
 FROM quay.io/fedora/fedora-bootc:latest
 LABEL maintainer="Ivan Gasperoni"
 
+COPY ./scripts/first-boot-setup.sh /usr/local/bin/first-boot-setup.sh
+COPY ./systemd/first-boot-setup.service /etc/systemd/system/first-boot-setup.service
+
 RUN dnf -y install dnf5-plugins && \
     dnf config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo && \
     dnf -y install \
@@ -33,9 +36,7 @@ RUN dnf -y install dnf5-plugins && \
         fprintd-pam \
         langpacks-it && \
     authselect enable-feature with-fingerprint && \
-    cp ./scripts/first-boot-setup.sh /usr/local/bin/first-boot-setup.sh && \
     chmod +x /usr/local/bin/first-boot-setup.sh && \
-    cp ./systemd/first-boot-setup.service /etc/systemd/system/first-boot-setup.service && \
     systemctl enable first-boot-setup.service && \
     flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo && \
     dnf -y autoremove && \

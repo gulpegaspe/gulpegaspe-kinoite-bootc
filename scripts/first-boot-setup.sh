@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sed -i '/ \\/ /s/^/#/' /etc/fstab
+sed -i '/ \/ /s/^/#/' /etc/fstab
